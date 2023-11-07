@@ -2,7 +2,9 @@
 #include <cmath>
 
 int main (){
-    int limite = 30;
+    std::cout << "Triangulos pitagoricos" << std::endl;
+    std::cout << "Especifique limite: "<<std::endl;
+    int limite = std::cin.get();
     for (int a = 1; a <= limite; a++){
         for (int b = a; b <= limite; b++){
             int c_cuadrada = (a * a + b * b);
