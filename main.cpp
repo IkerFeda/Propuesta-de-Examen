@@ -1,21 +1,16 @@
-#include <stdio.h>
-#include <math.h>
 #include <iostream>
+#include <cmath>
 
-int main (){
-    int a,b,c, limite;
-    limite = 30;
-
-    for (a = 3; a <= limite; a++){
-
-       for (b = a; b <= limite; b++){
-           c = sqrt(a^2 + b^2 );
-
-           if (c <= limite && c * c == (a * a + b * b) && a + b + c == 2 * limite) {
-               std::cout << a << " - " << b << " - " << c << std::endl;
-           }
-       }
-
-       }
-
-       }
+int main() {
+    int limit = 30;
+    for (int a = 1; a <= limit; a++) {
+        for (int b = a; b <= limit; b++) {
+            int c_square = a * a + b * b;
+            int c = sqrt(c_square);
+            if (c * c == c_square && c <= limit) {
+                std::cout << a << " - " << b << " - " << c << std::endl;
+            }
+        }
+    }
+    return 0;
+}
